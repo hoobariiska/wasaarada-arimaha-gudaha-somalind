@@ -3,437 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Talooyin iyo digniino ku saabsan badbaadada WhatsApp iyo ka fogaanshaha khiyaanooyinka.">
-  <meta name="theme-color" content="#075e54">
 
-  <title>Badbaado WhatsApp</title>
+  <title>Wasaaradda Arrimaha Gudaha</title>
 
   <style>
-    :root{
-      --green:#075e54;
-      --green2:#128c7e;
-      --pale:#e8f5ef;
-      --ink:#18312c;
-      --muted:#526760;
-      --line:#d6e5de;
-      --white:#fff;
-      --warn:#fff4d6;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
 
-    *{
-      box-sizing:border-box;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      margin:0;
-      background:#edf4f0;
-      color:var(--ink);
-      font-family:Arial,Helvetica,sans-serif;
-      line-height:1.6;
+    body {
+      background: #f4f7fb;
+      color: #222;
     }
 
-    header{
-      background:var(--green);
-      color:white;
-      padding:22px 16px;
+    /* HEADER */
+    header {
+      background: #075e54;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
     }
 
-    .wrap{
-      width:min(920px,100% - 28px);
-      margin:auto;
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 8px;
     }
 
-    .brand{
-      font-size:1.45rem;
-      font-weight:800;
+    header p {
+      font-size: 14px;
     }
 
-    .sub{
-      font-size:.94rem;
-      opacity:.92;
+    /* HOME */
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+      background: white;
     }
 
-    main{
-      padding:22px 0 38px;
+    .hero-box {
+      width: 100%;
+      max-width: 650px;
     }
 
-    .hero,
-    .panel{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-      margin-bottom:18px;
-      box-shadow:0 6px 20px #163e2b0b;
+    .hero h2 {
+      color: #075e54;
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 15px;
     }
 
-    .pill{
-      display:inline-block;
-      background:var(--warn);
-      padding:5px 10px;
-      border-radius:20px;
-      font-size:.82rem;
-      font-weight:700;
-      color:#755000;
+    .hero p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
 
-    h1{
-      font-size:clamp(1.55rem,5vw,2.25rem);
-      line-height:1.2;
-      margin:13px 0;
+    .contact-button {
+      display: inline-block;
+      background: #075e54;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
     }
 
-    h2{
-      font-size:1.25rem;
-      margin:0 0 12px;
+    .contact-button:hover {
+      background: #064e46;
     }
 
-    p{
-      margin:8px 0 12px;
+    /* CONTACT */
+    .container {
+      width: 92%;
+      max-width: 600px;
+      margin: 30px auto;
     }
 
-    .muted{
-      color:var(--muted);
-      font-size:.94rem;
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
     }
 
-    .tips{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:12px;
+    .card h2 {
+      color: #075e54;
+      margin-bottom: 18px;
+      font-size: 22px;
     }
 
-    .tip{
-      background:var(--pale);
-      padding:14px;
-      border-radius:12px;
+    label {
+      display: block;
+      margin: 15px 0 7px;
+      font-weight: bold;
     }
 
-    .tip strong{
-      display:block;
-      margin-bottom:4px;
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
     }
 
-    label{
-      display:block;
-      font-weight:700;
-      margin:13px 0 6px;
+    input:focus,
+    textarea:focus {
+      border-color: #075e54;
     }
 
-    textarea{
-      width:100%;
-      padding:13px;
-      border:1px solid #a8c5b7;
-      border-radius:10px;
-      font-size:1rem;
-      resize:vertical;
-      font-family:Arial,Helvetica,sans-serif;
+    textarea {
+      min-height: 120px;
+      resize: vertical;
     }
 
-    button{
-      width:100%;
-      border:0;
-      border-radius:10px;
-      background:var(--green2);
-      color:white;
-      font-size:1rem;
-      font-weight:700;
-      padding:14px;
-      margin-top:14px;
-      cursor:pointer;
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      background: #075e54;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    button:hover{
-      background:var(--green);
+    button:hover {
+      background: #064e46;
     }
 
-    .notice{
-      background:#f4f8f6;
-      border-left:4px solid var(--green2);
-      padding:12px;
-      border-radius:8px;
-      font-size:.91rem;
+    .note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      line-height: 1.5;
     }
 
-    .result{
-      display:none;
-      padding:14px;
-      border-radius:10px;
-      background:var(--pale);
-      margin-top:14px;
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 13px;
     }
 
-    .phone-box{
-      margin-top:16px;
-      background:#e8f5ef;
-      padding:18px;
-      border-radius:12px;
-      text-align:center;
-    }
+    /* MOBILE */
+    @media (max-width: 600px) {
 
-    .phone{
-      font-size:1.3rem;
-      font-weight:800;
-      color:var(--green);
-    }
+      .hero h2 {
+        font-size: 25px;
+      }
 
-    footer{
-      padding:18px 0;
-      color:var(--muted);
-      font-size:.88rem;
-    }
+      .hero p {
+        font-size: 15px;
+      }
 
-    a{
-      color:var(--green);
-      text-decoration:underline;
-    }
+      .card {
+        padding: 18px;
+      }
 
-    .links{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="wrap">
-    <div class="brand">💬 Badbaado WhatsApp</div>
-    <div class="sub">Digniin • Talooyin • Wacyigelin</div>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>Wasaaradda Arrimaha Gudaha</h1>
+    <p>Ku soo dhawoow adeegga xiriirka</p>
+  </header>
 
-<main class="wrap">
 
+  <!-- HOME -->
   <section class="hero">
 
-    <span class="pill">⚠️ OGEYSIIS AMNI</span>
+    <div class="hero-box">
 
-    <h1>
-      Ka digtoonow khiyaanooyinka WhatsApp
-    </h1>
+      <h2>
+        Muwaadin, ma rabtaa inaad si fudud noola soo xidhiidho?
+      </h2>
 
-    <p>
-      Ha ku degdegin fariimaha ku cabsi geliya ama kuu ballanqaada abaalmarin.
-      Hubi qofka kula soo xiriiray, hana bixin xog sir ah.
-    </p>
-
-    <p class="muted">
-      Boggan waa wacyigelin madax-bannaan;
-      ma aha bog rasmi ah oo WhatsApp leeyahay mana matalo WhatsApp ama Meta.
-    </p>
-
-  </section>
-
-
-  <section class="panel">
-
-    <h2>🛡️ Sida aad isu ilaalin karto</h2>
-
-    <div class="tips">
-
-      <div class="tip">
-        <strong>🔐 Ha bixin koodhka xaqiijinta</strong>
-        Waligaa qof ha la wadaagin SMS code-ka ama PIN-kaaga.
-      </div>
-
-      <div class="tip">
-        <strong>🔗 Ka fiirso linkiyada</strong>
-        Ha furin link aanad garanayn, gaar ahaan kuwa degdeg kuugu cadaadinaya.
-      </div>
-
-      <div class="tip">
-        <strong>✅ Daar xaqiijinta laba-tallaabo</strong>
-        Ka eeg WhatsApp: Settings → Account → Two-step verification.
-      </div>
-
-      <div class="tip">
-        <strong>💻 Hubi qalabka ku xiran</strong>
-        Ka eeg Linked devices oo ka saar qalab aadan aqoon.
-      </div>
-
-      <div class="tip">
-        <strong>💸 Xaqiiji codsiyada lacagta</strong>
-        Qofka wac ama si kale u xaqiiji haddii uu lacag ku weydiisto.
-      </div>
-
-      <div class="tip">
-        <strong>🚫 Ha bixin password</strong>
-        Qof talo ku siinaya uma baahna password-kaaga, PIN-kaaga ama koodhkaaga.
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="panel" id="xiriir">
-
-    <h2>📩 Fariin noo reeb</h2>
-
-    <p>
-      Haddii aad qabto su'aal ama aad u baahan tahay talo ku saabsan
-      badbaadada WhatsApp, fariintaada halkan ku qor.
-    </p>
-
-    <div class="notice">
-
-      <strong>Asturnaanta:</strong>
-
-      Kuma weydiinayno lambarkaaga telefoonka,
-      WhatsApp code, PIN ama password.
-
-      Fariintaada u qor si aan kuu fahanno,
-      kadibna waxaad si toos ah ula xiriiri kartaa maamulaha
-      adigoo isticmaalaya lambarka hoose.
-
-    </div>
-
-
-    <form id="messageForm">
-
-      <label for="message">
-        Fariintaada
-      </label>
-
-      <textarea
-        id="message"
-        name="message"
-        rows="6"
-        maxlength="1000"
-        placeholder="Tusaale: Waxaan helay fariin iga codsanaysa WhatsApp code..."
-        required>
-      </textarea>
-
-      <button type="submit">
-        📨 Soo Dir Fariinta
-      </button>
-
-    </form>
-
-
-    <div
-      class="result"
-      id="result"
-      role="status"
-      aria-live="polite">
-    </div>
-
-
-    <div class="phone-box">
-
-      <strong>
-        📞 Haddii aad rabto inaad si toos ah u soo wacdo:
-      </strong>
-
-      <div class="phone">
-        +252 XX XXX XXXX
-      </div>
-
-      <p class="muted">
-        ⚠️ Lambarkan ku beddel lambarkaaga ka hor intaadan website-ka daabicin.
+      <p>
+        Fariintaada noo soo dir, waxaanan kula soo xidhiidhi doonaa
+        marka aan helno.
       </p>
 
+      <a href="#contact" class="contact-button">
+        Nala Soo Xidhiidh
+      </a>
+
     </div>
 
   </section>
 
 
-  <section class="panel">
+  <!-- CONTACT FORM -->
+  <section id="contact">
 
-    <h2>🔒 Ogeysiiska asturnaanta</h2>
+    <div class="container">
 
-    <p>
-      <strong>Xogta la ururinayo:</strong>
-      Boggan ma weydiinayo ama ma ururinayo lambarka telefoonka qofka.
-    </p>
+      <div class="card">
 
-    <p>
-      <strong>Ujeeddada:</strong>
-      Fariinta qofku soo diro waxaa loogu talagalay oo keliya
-      inuu sharaxo su'aashiisa ama dhibaatada amni ee uu la kulmay.
-    </p>
+        <h2>Nala Soo Xidhiidh</h2>
 
-    <p>
-      <strong>Xog sir ah:</strong>
-      Ha ku qorin fariinta WhatsApp verification code,
-      PIN, password ama xog kale oo sir ah.
-    </p>
+        <form id="messageForm">
 
-    <p>
-      <strong>Maamulka:</strong>
-      Haddii fariimaha mustaqbalka lagu kaydiyo server/database,
-      waa in lagu ilaaliyaa marin xaddidan.
-    </p>
+          <!-- EMAIL -->
+          <label for="email">
+            Email-kaaga
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Geli email-kaaga"
+            required
+          >
+
+
+          <!-- MESSAGE 1 -->
+          <label for="message1">
+            Fariinta 1aad
+          </label>
+
+          <textarea
+            id="message1"
+            placeholder="Halkan ku qor fariinta koowaad..."
+            required
+          ></textarea>
+
+
+          <!-- MESSAGE 2 -->
+          <label for="message2">
+            Fariinta 2aad
+          </label>
+
+          <textarea
+            id="message2"
+            placeholder="Halkan ku qor fariinta labaad..."
+            required
+          ></textarea>
+
+
+          <!-- SEND -->
+          <button type="submit">
+            Send Message
+          </button>
+
+          <p class="note">
+            Fadlan hubi in xogta iyo fariimaha aad gelisay ay sax yihiin
+            ka hor intaadan dirin.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
 
   </section>
 
 
+  <!-- FOOTER -->
   <footer>
-
-    <div class="links">
-      <a href="#xiriir">Codso talo</a>
-      <a href="#xiriir">Asturnaanta</a>
-    </div>
-
-    <p>
-      Wacyigelin amni oo madax-bannaan.
-      Haddii aad u malaynayso in akoonkaaga la qabsaday,
-      ha la wadaagin koodhka xaqiijinta.
-    </p>
-
-    <p>
-      © Badbaado WhatsApp
-    </p>
-
+    © 2026 Wasaaradda Arrimaha Gudaha
   </footer>
 
-</main>
+
+  <script>
+
+    document
+      .getElementById("messageForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const email =
+          document.getElementById("email").value;
+
+        const message1 =
+          document.getElementById("message1").value;
+
+        const message2 =
+          document.getElementById("message2").value;
 
 
-<script>
-
-  document
-    .getElementById('messageForm')
-    .addEventListener('submit', function(event) {
-
-      event.preventDefault();
-
-      const message =
-        document.getElementById('message').value.trim();
-
-      const result =
-        document.getElementById('result');
+        const subject =
+          "Fariin cusub oo website-ka laga soo diray";
 
 
-      if (!message) {
-
-        result.style.display = 'block';
-
-        result.textContent =
-          'Fadlan fariintaada qor.';
-
-        return;
-      }
-
-
-      result.style.display = 'block';
-
-      result.innerHTML =
-        '✅ <strong>Fariintaada waa la helay.</strong><br>' +
-        'Wax yar i sug. Haddii aad rabto inaad si toos ah ula xiriirto, ' +
-        'isticmaal lambarka ku qoran bogga.';
+        const body =
+          "Email-ka qofka: " + email +
+          "\n\n" +
+          "FARIINTA 1AAD:\n" +
+          message1 +
+          "\n\n" +
+          "FARIINTA 2AAD:\n" +
+          message2;
 
 
-      document
-        .getElementById('message')
-        .value = '';
+        /*
+          MUHIIM:
+          Halkaan ku beddel email-kaaga.
+        */
 
-    });
+        const myEmail =
+          "YOUR-EMAIL@example.com";
 
-</script>
+
+        const mailto =
+          "mailto:" + myEmail +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+
+
+        window.location.href = mailto;
+
+      });
+
+  </script>
 
 </body>
 </html>
